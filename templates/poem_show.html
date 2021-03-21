@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}
+    古诗词网站
+{% endblock %}
+
+{% block headmessage %}
+    <a href="/">首页</a>
+    <h3 align="center">{{ poem_obj.title }}</h3>
+    <h4 align="center">{{ poem_obj.author }} {{ poem_obj.dynasty }}</h4>
+{% endblock %}
+
+{% block content %}
+    <p align="center">{{ poem_obj.body }}</p>
+    注释<br/>
+    <p> {{ poem_obj.annotation }}</p>
+    译文<br/>
+    <p> {{ poem_obj.translation }}</p>
+
+    创作背景<br/>
+    <p> {{ poem_obj.background }}</p>
+    赏析<br/>
+
+    <p> {{ poem_obj.remark }}</p>
+{% endblock %}

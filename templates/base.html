@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {{% block title %}
+        {% endblock %}
+    </title>
+    <link href="/static/plugins/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+         {% include 'header.html' %}
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            {% block headmessage %}
+            {% endblock %}
+        </div>
+
+        <div class="panel-body">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        <div class="panel-footer">
+        {% include 'footer.html' %}
+        </div>
+    </div>
+    </div>
+</body>
+</html>
